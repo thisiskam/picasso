@@ -2,94 +2,463 @@
 
 body {
     background-color:grey;
-    margin: 1px;
+    margin: 0px;
+    overflow: hidden;
 }
 
-.brick-row-one {
-    z-index: 0;
-    display: grid;
-    grid-template: 20px / 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px;
+@media(min-width: 1601px) {
+
+    .brick-row-one {
+        z-index: 0;
+        display: grid;
+        grid-template: 20px / 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px;
+    }
+
+    .brick-row-two {
+        z-index: 0;
+        display: grid;
+        grid-template: 20px / 20px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 20px;
+    }
+
+    .brick {
+        z-index: 0;
+        background-color: rgb(135, 28, 28);
+        margin: 1px 1px 0px 1px;
+    }
+
+    .window {
+        position:relative;
+        z-index: 7;
+        width: 300px;
+        height: 400px;
+        background-color: none;
+        margin-top: -900px;
+        margin-left: 150px;
+        border: 30px white solid;
+    }
+
+    .glass {
+        z-index: 5;
+        background-color: rgb(188, 184, 184);
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template: 25% 25% 25% 25% / 33% 33% 33%;
+        gap: 3px;
+    }
+
+    .glass-pane {
+        z-index: 6;
+        background-color: aliceblue;
+        width: 100%;
+        height: 100%;
+        opacity: .5;
+    }
+
+    .door {
+        position: relative;
+        height: 820px;
+        width: 330px;
+        background-color: rgb(20, 20, 27);
+        margin-left: 600px;
+        margin-top: -460px;
+        border-left: 30px white solid;
+        border-right: 30px white solid;
+        border-top: 30px white solid;
+        display: grid;
+        grid-template: 20% 40% 40% / 50% 50% ;
+        padding: 25px;
+    }
+
+    .panel {
+        border: 2px gray solid;
+        margin: 30px;
+        opacity: .3;
+    }
+
+    .handle {
+        position: relative;
+        margin-top: -450px;
+        margin-left: 970px;
+    }
+
+    .lock {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: gold;
+    }
+
+    .knob {
+        margin-top: 40px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: gold;
+    }
+
 }
 
-.brick-row-two {
-    z-index: 0;
-    display: grid;
-    grid-template: 20px / 20px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 20px;
+@media(max-width: 1600px) {
+    .brick-row-one {
+        z-index: 0;
+        display: grid;
+        grid-template: 20px / 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px;
+    }
+
+    .brick-row-two {
+        z-index: 0;
+        display: grid;
+        grid-template: 20px / 20px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 20px;
+    }
+
+    .brick {
+        z-index: 0;
+        background-color: rgb(135, 28, 28);
+        margin: 1px 1px 0px 1px;
+    }
+
+    .window {
+        position:relative;
+        z-index: 7;
+        width: 230px;
+        height: 350px;
+        background-color: none;
+        margin-top: -910px;
+        margin-left: 150px;
+        border: 30px white solid;
+    }
+
+    .glass {
+        z-index: 5;
+        background-color: rgb(188, 184, 184);
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template: 25% 25% 25% 25% / 33% 33% 33%;
+        gap: 3px;
+    }
+
+    .glass-pane {
+        z-index: 6;
+        background-color: aliceblue;
+        width: 100%;
+        height: 100%;
+        opacity: .5;
+    }
+
+    .door {
+        position: relative;
+        height: 700px;
+        width: 260px;
+        background-color: rgb(20, 20, 27);
+        margin-left: 550px;
+        margin-top: -411px;
+        border-left: 30px white solid;
+        border-right: 30px white solid;
+        border-top: 30px white solid;
+        display: grid;
+        grid-template: 20% 40% 40% / 50% 50% ;
+        padding: 25px;
+    }
+
+    .panel {
+        border: 2px gray solid;
+        margin: 30px;
+        opacity: .3;
+    }
+
+    .handle {
+        position: relative;
+        margin-top: -390px;
+        margin-left: 850px;
+    }
+
+    .lock {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: gold;
+    }
+
+    .knob {
+        margin-top: 40px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: gold;
+    }
 }
 
-.brick {
-    z-index: 0;
-    background-color: rgb(135, 28, 28);
-    margin: 1px 1px 0px 1px;
+@media(max-width: 1100px) {
+    .brick-row-one {
+        z-index: 0;
+        display: grid;
+        grid-template: 20px / 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px;
+    }
+
+    .brick-row-two {
+        z-index: 0;
+        display: grid;
+        grid-template: 20px / 20px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 20px;
+    }
+
+    .brick {
+        z-index: 0;
+        background-color: rgb(135, 28, 28);
+        margin: 1px 1px 0px 1px;
+    }
+
+    .window {
+        position:relative;
+        z-index: 7;
+        width: 210px;
+        height: 315px;
+        background-color: none;
+        margin-top: -930px;
+        margin-left: 130px;
+        border: 30px white solid;
+    }
+
+    .glass {
+        z-index: 5;
+        background-color: rgb(188, 184, 184);
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template: 25% 25% 25% 25% / 33% 33% 33%;
+        gap: 3px;
+    }
+
+    .glass-pane {
+        z-index: 6;
+        background-color: aliceblue;
+        width: 100%;
+        height: 100%;
+        opacity: .5;
+    }
+
+    .door {
+        position: relative;
+        height: 640px;
+        width: 230px;
+        background-color: rgb(20, 20, 27);
+        margin-left: 500px;
+        margin-top: -375px;
+        border-left: 30px white solid;
+        border-right: 30px white solid;
+        border-top: 30px white solid;
+        display: grid;
+        grid-template: 20% 40% 40% / 50% 50% ;
+        padding: 25px;
+    }
+
+    .panel {
+        border: 2px gray solid;
+        margin: 20px;
+        opacity: .3;
+    }
+
+    .handle {
+        position: relative;
+        margin-top: -360px;
+        margin-left: 775px;
+    }
+
+    .lock {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: gold;
+    }
+
+    .knob {
+        margin-top: 40px;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: gold;
+    }
 }
 
-.window {
-    position:relative;
-    z-index: 7;
-    width: 300px;
-    height: 400px;
-    background-color: none;
-    margin-top: -900px;
-    margin-left: 150px;
-    border: 30px white solid;
+@media(max-width: 800px) {
+    .brick-row-one {
+        z-index: 0;
+        display: grid;
+        grid-template: 20px / 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px;
+    }
+
+    .brick-row-two {
+        z-index: 0;
+        display: grid;
+        grid-template: 20px / 20px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 20px;
+    }
+
+    .brick {
+        z-index: 0;
+        background-color: rgb(135, 28, 28);
+        margin: 1px 1px 0px 1px;
+    }
+
+    .window {
+        position:relative;
+        z-index: 7;
+        width: 150px;
+        height: 200px;
+        background-color: none;
+        margin-top: -930px;
+        margin-left: 80px;
+        border: 20px white solid;
+    }
+
+    .glass {
+        z-index: 5;
+        background-color: rgb(188, 184, 184);
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template: 25% 25% 25% 25% / 33% 33% 33%;
+        gap: 3px;
+    }
+
+    .glass-pane {
+        z-index: 6;
+        background-color: aliceblue;
+        width: 100%;
+        height: 100%;
+        opacity: .5;
+    }
+
+    .door {
+        position: relative;
+        height: 430px;
+        width: 160px;
+        background-color: rgb(20, 20, 27);
+        margin-left: 350px;
+        margin-top: -240px;
+        border-left: 20px white solid;
+        border-right: 20px white solid;
+        border-top: 20px white solid;
+        display: grid;
+        grid-template: 20% 40% 40% / 50% 50% ;
+        padding: 17px;
+    }
+
+    .panel {
+        border: 2px gray solid;
+        margin: 13px;
+        opacity: .3;
+    }
+
+    .handle {
+        position: relative;
+        margin-top: -245px;
+        margin-left: 539px;
+    }
+
+    .lock {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: gold;
+    }
+
+    .knob {
+        margin-top: 25px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: gold;
+    }
 }
 
-.glass {
-    z-index: 5;
-    background-color: rgb(188, 184, 184);
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template: 25% 25% 25% 25% / 33% 33% 33%;
-    gap: 3px;
-}
+@media(max-width: 500px) {
+    .brick-row-one {
+        z-index: 0;
+        display: grid;
+        grid-template: 20px / 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px;
+    }
 
-.glass-pane {
-    z-index: 6;
-    background-color: aliceblue;
-    width: 100%;
-    height: 100%;
-    opacity: .5;
-}
+    .brick-row-two {
+        z-index: 0;
+        display: grid;
+        grid-template: 20px / 20px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 20px;
+    }
 
-.door {
-    position: relative;
-    height: 820px;
-    width: 330px;
-    background-color: rgb(20, 20, 27);
-    margin-left: 600px;
-    margin-top: -460px;
-    border-left: 30px white solid;
-    border-right: 30px white solid;
-    border-top: 30px white solid;
-    display: grid;
-    grid-template: 20% 40% 40% / 50% 50% ;
-    padding: 25px;
-}
+    .brick {
+        z-index: 0;
+        background-color: rgb(135, 28, 28);
+        margin: 1px 1px 0px 1px;
+    }
 
-.panel {
-    border: 2px gray solid;
-    margin: 30px;
-    opacity: .3;
-}
+    .window {
+        position:relative;
+        z-index: 7;
+        width: 80px;
+        height: 120px;
+        background-color: none;
+        margin-top: -930px;
+        margin-left: 50px;
+        border: 12px white solid;
+    }
 
-.handle {
-    position: relative;
-    margin-top: -450px;
-    margin-left: 970px;
-}
+    .glass {
+        z-index: 5;
+        background-color: rgb(188, 184, 184);
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template: 25% 25% 25% 25% / 33% 33% 33%;
+        gap: 3px;
+    }
 
-.lock {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: gold;
-}
+    .glass-pane {
+        z-index: 6;
+        background-color: aliceblue;
+        width: 100%;
+        height: 100%;
+        opacity: .5;
+    }
 
-.knob {
-    margin-top: 40px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: gold;
+    .door {
+        position: relative;
+        height: 245px;
+        width: 90px;
+        background-color: rgb(20, 20, 27);
+        margin-left: 200px;
+        margin-top: -142px;
+        border-left: 12px white solid;
+        border-right: 12px white solid;
+        border-top: 12px white solid;
+        display: grid;
+        grid-template: 20% 40% 40% / 50% 50% ;
+        padding: 9px;
+    }
+
+    .panel {
+        border: 2px gray solid;
+        margin: 7px;
+        opacity: .3;
+    }
+
+    .handle {
+        position: relative;
+        margin-top: -142px;
+        margin-left: 306px;
+    }
+
+    .lock {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: gold;
+    }
+
+    .knob {
+        margin-top: 15px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: gold;
+    }
 }
